@@ -1,2 +1,2 @@
 # Discrash
-Mega functional discord crusher
+Mega functional discord crasher
