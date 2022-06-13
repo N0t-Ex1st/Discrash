@@ -1,2 +1,2 @@
-# discord-crasher
+# Discrash
 Mega functional discord crusher
