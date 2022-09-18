@@ -1,1 +1,1 @@
-discord==1.7.3
+discord==2.0.0

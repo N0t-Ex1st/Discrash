@@ -54,6 +54,8 @@ def main(t, m, p, txt, n):
                 await rspam(gi)
                 await spam(gi, txt)
     if m == "1":
+        print("Жду комманду !nuke")
+
         @client.command()
         async def nuke(ctx):
             arg = ctx.guild
@@ -184,24 +186,23 @@ async def dele(guild):
         print(f"{R}Не смог удалить смайлики{W}")
 
 
-async def namech(guild, nick):
+async def namech(guild, n):
     try:
         print("> Начинаем маскарад...")
 
-        def name_gen():
-            if nick is None:
+        def name_gen(nick):
+            if nick == "":
                 char = string.ascii_letters + string.digits
                 return ''.join((random.choice(char) for _ in range(16)))
             else:
                 return nick
 
         for member in guild.members:
-            nick = ""
-            nick = name_gen()
+            a = name_gen(n)
             try:
-                await member.edit(name=nick)
+                await member.edit(nick=a)
                 print(
-                    f"Поменял имя {member} на {nick}")
+                    f"Поменял имя {member} на {a}")
             except:
                 print(f"{R}Не смог поменять имя {member}{W}")
         print("> Все теперь анонизмусы.")
@@ -216,8 +217,8 @@ async def chspam(guild):
         for b in range(10):
             await guild.create_text_channel("Hello from Osiris!")
             counter += 1
-            print("Создал канал", counter, end="\r")
-        print("Создал канал", counter)
+            print("Создал ", counter, " канала(ов)", end="\r")
+        print("Создал ", counter, " канала(ов)")
         print("> Каналы созданны")
     except:
         print(f"> {R}Не смог создать каналы{W}")
@@ -230,8 +231,8 @@ async def rspam(guild):
         for a in range(100):
             await guild.create_role(name="Hello from Osiris!")
             counter += 1
-            print("Создал роль", counter, end="\r")
-        print("Создал роль", counter)
+            print("Создал ", counter, " ролей", end="\r")
+        print("Создал", counter, " ролей")
         print("> Наcпамил ролями...")
     except:
         print(f"> {R}Не смог наспамить ролями{W}")
