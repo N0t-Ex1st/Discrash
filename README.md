@@ -7,6 +7,10 @@
 Просто запустите файл main.py через консоль с помощью комманды  `python main.py`.  
 Для помощи напишите в аргумент слово help  `python main.py help`.
 # Помощь
+## Видео туториал // Video tutorial:
+[![Video tutorial](https://media.discordapp.net/attachments/831946993399627846/1021463555477864588/prew.png?width=600&height=350)](http://www.youtube.com/watch?v=nMlWiR2KnqU)  
+Нажми на картинку или ссылку: https://youtu.be/nMlWiR2KnqU
+
 ## Режимы нюкера:  
         Ручной - настраиваемый режим, можно запустить командой на сервере или сразу на всех серверах.  
         Автоматический - выполнит фулл нюк(см. ниже) на всех серверах.  
